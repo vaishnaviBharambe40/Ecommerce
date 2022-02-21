@@ -5,11 +5,12 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ContactModule } from './contact/contact.module';
-import { UsersService } from './users/users.service';
+
 
 @Module({
-  imports: [AuthModule, UsersModule, TypeOrmModule.forRoot(), ContactModule, UsersService],
+  imports: [AuthModule, UsersModule, TypeOrmModule.forRoot(), ContactModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+
+export class AppModule{}
